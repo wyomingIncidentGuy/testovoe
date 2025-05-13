@@ -10,7 +10,13 @@ async function bootstrap() {
     prefix: '/static/',
   });
 
-  await app.listen(process.env.PORT);
+  app.enableCors({
+    origin: 'http://localhost:3000',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
+    credentials: true,
+  });
+
+  await app.listen(4000);
 }
 
 bootstrap();

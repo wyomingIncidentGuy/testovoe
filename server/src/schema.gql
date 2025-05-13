@@ -1,0 +1,40 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Car {
+  """Уникальный id автомобиля"""
+  id: Int!
+
+  """Марка автомобиля"""
+  brand: String!
+
+  """Модель автомобиля"""
+  model: String!
+
+  """Цвет автомобиля"""
+  color: String!
+
+  """Год выпуска модели автомобиля"""
+  model_year: Int!
+
+  """Фото автомобиля"""
+  img_src: String!
+
+  """Цена автомобиля"""
+  price: String!
+
+  """Краткое описание автомобиля"""
+  description: String!
+
+  """Наличие автомобиля"""
+  availability: Boolean!
+}
+
+type Query {
+  """Получить все автомобили"""
+  cars(search: String): [Car!]!
+
+  """Получить автомобиль по id"""
+  car(id: Int!): Car
+}
