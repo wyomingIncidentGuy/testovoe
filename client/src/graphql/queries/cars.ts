@@ -6,12 +6,12 @@ export const GET_CARS = gql`
       id
       brand
       model
+      model_year
       color
       price
       img_src
-      description
       availability
-      model_year
+      description
     }
   }
 `; 
